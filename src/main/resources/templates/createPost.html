@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>ÚJ-BEJEGYZÉS</title>
+    </head>
+    <body>
+        <h1>Új bejegyzés létrehozása</h1>
+        <!-- http POST kérés/utasítás :azzal, hogy alább, a beviteli ablak (form) 
+             visszaküldi a gombnyomásra az űrlap tartalmát arra a címre, 
+             ami az "action" attributum tartalomban van : -->
+        <form action="/api/posts/create" method="post" th:object="${post}">
+            
+            <label for="title">BlogCim</label>
+            <input type="text" id="title" name="title" th:field="*{title}" required/>
+
+            <label for="content">Tartalom:</label>
+            <textarea id="content" name="content" th:field="*{content}" required></textarea>
+
+            <button type="submit">Létrehozás</button>
+        </form>
+    </body>
+</html>
+

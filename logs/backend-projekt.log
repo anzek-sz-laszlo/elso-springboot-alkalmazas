@@ -1,0 +1,33 @@
+2024-02-10T07:47:53.058+01:00  WARN 5072 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=11h56m23s339ms960µs700ns).
+2024-02-10T07:54:28.624+01:00  INFO 19016 --- [restartedMain] hu.anzek.backend.BackendApplication      : Starting BackendApplication using Java 21.0.1 with PID 19016 (D:\java_meghajto\ProgramozasTanitasa\java_backend_tanfolyam\anzek\pallas70projects\First-backend-minta\backend\target\classes started by User in D:\java_meghajto\ProgramozasTanitasa\java_backend_tanfolyam\anzek\pallas70projects\First-backend-minta\backend)
+2024-02-10T07:54:28.629+01:00  INFO 19016 --- [restartedMain] hu.anzek.backend.BackendApplication      : No active profile set, falling back to 1 default profile: "default"
+2024-02-10T07:54:28.876+01:00  INFO 19016 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-02-10T07:54:28.877+01:00  INFO 19016 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-02-10T07:54:31.379+01:00  INFO 19016 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-02-10T07:54:31.817+01:00  INFO 19016 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 412 ms. Found 1 JPA repository interface.
+2024-02-10T07:54:32.350+01:00  INFO 19016 --- [restartedMain] faultConfiguringBeanFactoryPostProcessor : No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2024-02-10T07:54:32.379+01:00  INFO 19016 --- [restartedMain] faultConfiguringBeanFactoryPostProcessor : No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2024-02-10T07:54:34.118+01:00  INFO 19016 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-02-10T07:54:34.163+01:00  INFO 19016 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-02-10T07:54:34.165+01:00  INFO 19016 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.18]
+2024-02-10T07:54:34.315+01:00  INFO 19016 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-02-10T07:54:34.316+01:00  INFO 19016 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 5437 ms
+2024-02-10T07:54:34.817+01:00  INFO 19016 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-02-10T07:54:35.364+01:00  INFO 19016 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:D:/H2_Test_Databases/posztok user=SA
+2024-02-10T07:54:35.369+01:00  INFO 19016 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-02-10T07:54:35.395+01:00  INFO 19016 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:D:/H2_Test_Databases/posztok'
+2024-02-10T07:54:36.004+01:00  INFO 19016 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-02-10T07:54:36.284+01:00  INFO 19016 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.1.Final
+2024-02-10T07:54:36.428+01:00  INFO 19016 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-02-10T07:54:37.073+01:00  INFO 19016 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-02-10T07:54:37.221+01:00  WARN 19016 --- [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-02-10T07:54:40.003+01:00  INFO 19016 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-02-10T07:54:40.143+01:00  INFO 19016 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-02-10T07:54:41.556+01:00  INFO 19016 --- [restartedMain] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-02-10T07:54:41.832+01:00  WARN 19016 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-02-10T07:54:44.737+01:00  INFO 19016 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-02-10T07:54:45.041+01:00  INFO 19016 --- [restartedMain] o.s.i.endpoint.EventDrivenConsumer       : Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2024-02-10T07:54:45.044+01:00  INFO 19016 --- [restartedMain] o.s.i.channel.PublishSubscribeChannel    : Channel 'application.errorChannel' has 1 subscriber(s).
+2024-02-10T07:54:45.046+01:00  INFO 19016 --- [restartedMain] o.s.i.endpoint.EventDrivenConsumer       : started bean '_org.springframework.integration.errorLogger'
+2024-02-10T07:54:45.159+01:00  INFO 19016 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-02-10T07:54:45.185+01:00  INFO 19016 --- [restartedMain] hu.anzek.backend.BackendApplication      : Started BackendApplication in 17.867 seconds (process running for 21.522)
