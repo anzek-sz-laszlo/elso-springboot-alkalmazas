@@ -2,8 +2,6 @@ package hu.anzek.backend.service;
 
 
 import hu.anzek.backend.datalayer.model.Post;
-import hu.anzek.backend.datalayer.repository.DBMUVELET;
-import hu.anzek.backend.datalayer.repository.PostRepo;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -24,7 +22,7 @@ public class PostService {
      * @return a lista kollekció, vagy üres lista (list.size() == 0)<br>
      */
     public List<Post> getAllPosts() {
-        return postRepo.findAll();
+        return postRepo.gyujtsdleOsszeset();
     }
 
     /**
@@ -33,7 +31,7 @@ public class PostService {
      * @return a "post" entitás, vagy null érték!<br>
      */
     public Post getPost(Long id) {
-        return postRepo.findById(id);
+        return postRepo.keressIdAzonositora(id);
     }
 
     /** 
@@ -52,7 +50,7 @@ public class PostService {
      * @throws hu.anzek.backend.service.OwnException a JQL-MEGRE parancs végrehajtása problémába ütközik<br>
      */
     public void deletePost(Long id) throws OwnException {
-        Post post = postRepo.findById(id);
+        Post post = postRepo.keressIdAzonositora(id);
         postRepo.merge(post, DBMUVELET.DELETE);
     }     
 }

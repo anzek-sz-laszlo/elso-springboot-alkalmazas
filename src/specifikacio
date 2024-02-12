@@ -1,0 +1,32 @@
+1, A keretrendszer bemutatása példán kerezstül
+
+programozási módszertan megfelő logikával:
+MVC
+Model - View - Controller
+
+- A feladat: 
+
+SERVICE LAYER == üzleti logika:
+    2,1 - vegyünk fel blog bejegyzéseket 
+    2,2 - és tároljuk azokat sql-adatbázisban
+    2,3 - ill. olvassuk ki a bejegyzések listáját a megjelenítéshez
+
+    teszt(üzelti logika része):
+        2,3 - - az adatbevitelt : 
+        2,3-1 - külső teszt adatokból
+        2,3-2 - programon belüli teszt adatokból
+        2,3-3 - bögészőból bevitt user-adatokból
+DATALAYER == adatréteg-model réteg:
+    3, model - post etitás - és a repositoryk
+
+VIEW == Mejelenítés:
+    4,1 - konzol
+    4,2 - böngészőben
+
+- Kiegészítések:
+5, H2 mem/file belső (integrált) adatbáziskezelő használatával
+6, A thymeleaf sablonkezelő használatával
+
+- Beállításjegyzékek:
+7, a Spring-keretrendszer beállításjegyzéke
+8, a Maven-projektkezelő POM.XML vezérlője

@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Other/File.java to edit this template
  */
-package hu.anzek.backend.controller;
+package hu.anzek.backend.webcontroller;
 
 
 import hu.anzek.backend.datalayer.model.Post;
@@ -30,9 +30,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/api/posts")
 public class PostController {
 
-    // ún. konstruktor injektálás:
     private final PostService postService;
     
+    // ún. konstruktor injektálás:
     @Autowired
     public PostController(PostService postService) {
         this.postService = postService;
@@ -75,9 +75,9 @@ public class PostController {
         
         // ha nem injektálnénk, példányosítanunk kellene:
         //                      Map<String,List<Post>> model = new HashMap<>();
-        List<Post> adatokLista = this.postService.getAllPosts();
-                
+        // List<Post> adatokLista = this.postService.getAllPosts();                
         model.put("posztok", this.postService.getAllPosts());
+        
         return "postSablon";
     }        
 }

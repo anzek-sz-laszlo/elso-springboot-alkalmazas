@@ -25,7 +25,7 @@ public class BackendApplication implements CommandLineRunner {
      * @param args argumentum (halenne, de nincs...)
      */
     public static void main(String[] args) {
-            SpringApplication.run(BackendApplication.class, args);
+        SpringApplication.run(BackendApplication.class, args);
     }
     
     @Override
@@ -51,6 +51,8 @@ public class BackendApplication implements CommandLineRunner {
         newPost.setContent("bemutatja továbbá a közvelen-, ill, a konstruktor-paraméter injektálást");
         posztList.add(newPost);
 
+        posztList.add(new Post("a negyedik:", "bemutatja továbbá a konstruktor inicializálást"));
+        
         // adatok kiíratása az adatbázisba:
         try{
             posztList.forEach(e -> {

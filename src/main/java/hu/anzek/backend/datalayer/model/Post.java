@@ -23,7 +23,7 @@ public class Post {
     //AUTO: a JPA automatikusan választ egy megfelelő azonosítógenerálási stratégiát a használt adatbázis típusa alapján. 
     //      Például, ha egy MySQL adatbázist használsz, akkor IDENTITY stratégiát választ.
     //      Támogatja a H2 és a MySQL is!    
-    //IDENTITY: maga az adatbázis generálja az azonosítót. (AUTOINCREMENT) 
+    //IDENTITY: maga az adatbázis generálja az azonosítót. (AUTO_INCREMENT) 
     //      Ez a stratégia leginkább azoknál az adatbázisoknál használatos, 
     //      amelyek támogatják az automatikusan növekvő azonosítókat, mint például az MySQL 
     //      Támogatja a H2 és a MySQL is!    
@@ -38,9 +38,9 @@ public class Post {
     //UUID: az azonosítókat véletlenszerűen generálja az UUID (Universally Unique Identifier - szabvány) specifikáció alapján 
     //
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    
+    @GeneratedValue(strategy = GenerationType.IDENTITY)    
     private Long id;
+    
     private String title;
     private String content; 
     
@@ -50,6 +50,12 @@ public class Post {
     public Post() {
     }
 
+    public Post(String title, String content) {
+        this.title = title;
+        this.content = content;
+    }
+
+    
     public Long getId() {
         return id;
     }

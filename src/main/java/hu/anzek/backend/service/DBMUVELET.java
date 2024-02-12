@@ -1,4 +1,4 @@
-package hu.anzek.backend.datalayer.repository;
+package hu.anzek.backend.service;
 
 /**
  * Az ENUM (enumerált == felsorolási állandó)
@@ -6,9 +6,7 @@ package hu.anzek.backend.datalayer.repository;
  */
 public enum DBMUVELET {
 
-    DELETE(-1),
-    UPDATE(0),
-    INSERT(1);
+    DELETE(-1),UPDATE(0),INSERT(1);
     
     private final int level;
 

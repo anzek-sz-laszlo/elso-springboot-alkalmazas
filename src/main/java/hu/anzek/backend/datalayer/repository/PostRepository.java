@@ -31,8 +31,10 @@ public interface PostRepository extends JpaRepository<Post, Long> {
     @Override
     public List<Post> findAll();
 
+    public Optional<Post> findByTitle(String findTitle);
+    
     @Override
-    Optional<Post> findById(Long id);
+    public Optional<Post> findById(Long id);
     
     @Override
             // egy kis generikus magyarázat:
@@ -44,7 +46,7 @@ public interface PostRepository extends JpaRepository<Post, Long> {
             //      amúgy ebből kifolyólag vlójában a:
             // public Post save(Post post);
             //      is helyes megoldás, csak egy figyelmeztetéssel jár együtt: azzal, hogy itt egy "felsőhatáros" referencia-definíció van!
-    <S extends Post> S save(S post);
+    public <S extends Post> S save(S post);
     
     // adatmanupulatív műveletnél
     // a Transactional
@@ -52,7 +54,7 @@ public interface PostRepository extends JpaRepository<Post, Long> {
     @Transactional
     @Modifying
     @Override
-    void deleteById(Long id);
+    public void deleteById(Long id);
     
     @Transactional
     @Modifying
@@ -75,5 +77,5 @@ public interface PostRepository extends JpaRepository<Post, Long> {
     //JPQL: SELECT u FROM User u JOIN u.orders o;    
     
     @Override
-    void deleteAll();
+    public void deleteAll();
 }
